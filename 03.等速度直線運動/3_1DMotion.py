@@ -12,7 +12,7 @@ from vpython import *
 size = 0.05   # side length of wood block
 l = 1        # floor length
 v = 0.03     # Block speed
-t = 4        # time
+t = 19        # time
 dt = 0.01    # Time interval
 
 """
