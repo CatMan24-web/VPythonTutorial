@@ -9,9 +9,9 @@ from vpython import *
 """
  1. 參數設定, 設定變數及初始值
 """
-size = 0.5   # side length of wood block
+size = 0.05   # side length of wood block
 l = 1        # floor length
-v = 0.3     # Block speed
+v = 0.03     # Block speed
 t = 0        # time
 dt = 0.01    # Time interval
 
