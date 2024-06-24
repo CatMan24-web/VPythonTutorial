@@ -10,7 +10,7 @@ from vpython import *
  1. 參數設定, 設定變數及初始值
 """
 size = 0.5   # side length of wood block
-L = 1        # floor length
+l = 1        # floor length
 v = 0.3     # Block speed
 t = 0        # time
 dt = 0.01    # Time interval
@@ -20,7 +20,7 @@ dt = 0.01    # Time interval
 
 """
 scene = canvas(title="1D Motion", width=800, height=600, x=0, y=0, center=vec(0, 0.1, 0), background=vec(0, 0.6, 0.6))
-floor = box(pos=vec(0, 0, 0), size=vec(L, 0.1*size, 0.5*L), color=color.blue)
+floor = box(pos=vec(0, 0, 0), size=vec(L, 0.1*size, 0.5*L), color=color.red)
 cube = box(pos=vec(-0.5*L + 0.5*size, 0.55*size, 0), size=vec(size, size, size), color=color.blue, v=vec(v, 0, 0))
 gd = graph(title="x-t plot", width=600, height=450, x=0, y=600, xtitle="t(s)", ytitle="x(m)")
 gd2 = graph(title="v-t plot", width=600, height=450, x=0, y=1050, xtitle="t(s)", ytitle="v(m/s)")
@@ -30,7 +30,7 @@ vt = gcurve(graph=gd2, color=color.red)
 """
 3. In the moving part of the object, execution stops when the wooden block reaches the edge of the floor.
 """
-while(cube.pos.x <= 0.5*L- 0.5*size):
+while(cube.pos.x <= 0.5*l- 0.5*size):
     rate(1000)
     cube.pos.x += v*dt
     xt.plot(pos = (t, cube.pos.x))
